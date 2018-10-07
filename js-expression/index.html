@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>js-exspression</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>
+      {{ message }}
+    </p>
+    <p>
+      {{ number + 1 }}
+    </p>
+    <p>
+      {{ message.split('').reduceRight((acc, cur) => acc + cur) }}
+    </p>
+    <p>
+      {{ ok ? 'Yes' : 'No' }}
+    </p>
+    <p>
+      <!-- {{ const x = 1 }} -->
+      <!-- {{ if (ok) return message }} -->
+      {{ ok ? message : '' }}
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
