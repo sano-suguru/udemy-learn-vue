@@ -1,7 +1,8 @@
 const app = new Vue({
   el: "#app",
   data: {
-    bpi: null
+    bpi: null,
+    hasError: false
   },
   mounted: function() {
     axios
@@ -9,7 +10,8 @@ const app = new Vue({
       .then(response => {
         this.bpi = response.data.bpi;
       })
-      .catch(function(error) {
+      .catch(error => {
+        this.hasError = true;
         console.log(error);
       });
   },
