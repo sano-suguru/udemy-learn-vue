@@ -10,6 +10,11 @@
   <div id="app">
     <h2>TODO List</h2>
     <form v-on:submit.prevent>
+      <ul>
+        <li v-for="todo in todos">
+          <span>{{ todo.item }}</span>
+        </li>
+      </ul>
       <input type="text" v-model="newItem">
       <button v-on:click="addItem">
         Add
