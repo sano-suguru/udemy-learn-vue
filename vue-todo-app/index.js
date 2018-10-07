@@ -8,7 +8,8 @@ const app = new Vue({
     addItem: function(event) {
       if (this.newItem === "") return;
       const newTodo = {
-        item: this.newItem
+        item: this.newItem,
+        isDone: false
       };
       this.todos.push(newTodo);
       this.newItem = "";
