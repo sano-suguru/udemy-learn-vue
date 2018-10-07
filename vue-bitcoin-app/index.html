@@ -13,7 +13,7 @@
     </h2>
     <ul>
       <li v-for="(rate, currency) in bpi">
-        {{ currency }} : {{ rate.rate_float }}
+        {{ currency }} : {{ rate.rate_float | currencyDecimal}}
       </li>
     </ul>
   </div>
