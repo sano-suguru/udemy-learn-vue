@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>basics of vue</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>
+      {{ message }}
+    </p>
+    <p v-if="toggle">
+      <a v-bind:href="url">Vue.js公式サイト</a>
+    </p>
+    <p>
+      <ul>
+        <li v-for="lang in languages">{{ lang }}</li>
+      </ul>
+    </p>
+    <p>
+      <button v-on:click="handleClick">Click!</button>
+    </p>
+    <p>
+      <input type='text' v-model="message">
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
