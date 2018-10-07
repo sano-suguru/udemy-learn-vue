@@ -2,7 +2,8 @@ const app = new Vue({
   el: "#app",
   data: {
     bpi: null,
-    hasError: false
+    hasError: false,
+    loading: true
   },
   mounted: function() {
     axios
@@ -13,6 +14,9 @@ const app = new Vue({
       .catch(error => {
         this.hasError = true;
         console.log(error);
+      })
+      .finally(() => {
+        this.loading = false;
       });
   },
   filters: {
