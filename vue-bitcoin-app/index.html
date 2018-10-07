@@ -4,6 +4,7 @@
 <head>
   <meta charset='UTF-8'>
   <title>vue-bitcoin-app</title>
+  <link rel='stylesheet' href='./style.css'>
 </head>
 
 <body>
@@ -11,7 +12,7 @@
     <h2>
       Bitcoin Pirce
     </h2>
-    <ul>
+    <ul v-cloak>
       <li v-for="(rate, currency) in bpi">
         {{ currency }} : {{ rate.rate_float | currencyDecimal}}
       </li>
