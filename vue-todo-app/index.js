@@ -13,6 +13,9 @@ const app = new Vue({
       };
       this.todos.push(newTodo);
       this.newItem = "";
+    },
+    deleteItem: function(index) {
+      this.todos.splice(index, 1);
     }
   }
 });
