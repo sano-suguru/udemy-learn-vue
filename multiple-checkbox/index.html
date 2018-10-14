@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>multiple checkbox</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type='checkbox' id='red' value="Red" v-model="colors">
+    <label for='red'>Red</label>
+    <input type='checkbox' id='green' value="Green" v-model="colors">
+    <label for='green'>Green</label>
+    <input type='checkbox' id='blue' value="Blue" v-model="colors">
+    <label for='blue'>Blue</label>
+    <p>
+      {{ colors }}
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
