@@ -10,8 +10,8 @@
 <body>
   <div id="app">
     <p>
-      <!-- 配列でクラス名を渡すことが可能 -->
-      Hello <span v-bind:class="[largeClass, dangerClass]">Vue.js!</span>
+      <!-- v-bind:class とプレーンなクラスの指定は共存できる -->
+      Hello <span class="bg-gray text-blue" v-bind:class="{large: isLarge, 'text-danger': hasError}">Vue.js!</span>
     </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
