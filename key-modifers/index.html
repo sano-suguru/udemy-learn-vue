@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>key modifers</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- escapeキーを押すとテキストがクリアされる -->
+    <!-- キーコード27は人間から見てわかりにくいのでエイリアスが用意されている -->
+    <!-- <input type='text' v-on:keyup.27="clear" v-model="message"> -->
+    <input type='text' v-on:keyup.esc="clear" v-model="message">
+    <!-- 複数のキーを指定することもできる -->
+    <input type='text' v-on:keyup.esc.space.up="clear" v-model="message">
+    <p>
+      {{ message }}
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
