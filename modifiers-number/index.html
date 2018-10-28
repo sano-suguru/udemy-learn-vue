@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Modifiers number</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>
+      <input type='number' v-model.number="age">
+    </p>
+    <p>
+      <!-- number修飾子がついているので数値に型変換されてから + される -->
+      {{ age + 10 }}
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
