@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Transition</title>
+  <link rel='stylesheet' href='./style.css'>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="show=!show">
+      Toggle
+    </button>
+    <transition>
+      <p v-show="show">
+        Hello Transition
+      </p>
+    </transition>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
